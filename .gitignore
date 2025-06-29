@@ -1,0 +1,22 @@
+# Archivos compilados
+*.class
+
+# Directorios de compilación
+/bin/
+/build/
+/out/
+/target/
+
+# Archivos de log
+*.log
+
+# Archivos del IDE
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
