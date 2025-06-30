@@ -20,12 +20,10 @@ public class Libro {
     }
 
     // Metodo para mostrar información del libro
-    public void mostrarInformacion() {
-        System.out.println("Título: " + titulo);
-        System.out.println("Autor: " + autor);
-        System.out.println("Número de páginas: " + numeroPaginas);
-
+    public String toString() {
+        return "Libro \n" + " titulo: " + titulo + "\n autor: " + autor + "\n numeroPaginas: " + numeroPaginas;
     }
+
     public String getTitulo() {
         return titulo;
     }

@@ -23,4 +23,9 @@ public class Estudiante {
         this(nombre, edad);
         this.curso = curso;
     }
+
+
+    public String toString() {
+        return "Estudiante \n" + " nombre: " + nombre + "\n edad: " + edad + "\n curso: " + curso ;
+    }
 }
