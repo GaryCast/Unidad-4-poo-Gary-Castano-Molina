@@ -3,13 +3,12 @@ package Taller_2.Ejercicios;
 public class Persona {
     private String nombre;
 
-    // Constructor para asignar nombre
     public Persona(String nombre) {
         this.nombre = nombre;
     }
 
-    // Metodo de instancia No estático
-    public void mostrarNombre() {
-        System.out.println(this.nombre);
+    // Metodo estático que recibe una instancia
+    public static void mostrarNombre(Persona persona) {
+        System.out.println(persona.nombre);
     }
 }
