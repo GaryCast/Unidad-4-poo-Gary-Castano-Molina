@@ -19,4 +19,20 @@ public class Libro {
         this.numeroPaginas = paginas;
     }
 
+    // Metodo para mostrar información del libro
+    public void mostrarInformacion() {
+        System.out.println("Título: " + titulo);
+        System.out.println("Autor: " + autor);
+        System.out.println("Número de páginas: " + numeroPaginas);
+
+    }
+    public String getTitulo() {
+        return titulo;
+    }
+    public String getAutor() {
+        return autor;
+    }
+    public int getNumeroPaginas() {
+        return numeroPaginas;
+    }
 }
