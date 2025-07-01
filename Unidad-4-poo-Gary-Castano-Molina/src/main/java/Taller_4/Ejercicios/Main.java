@@ -2,20 +2,16 @@ package Taller_4.Ejercicios;
 
 public class Main {
     public static void main(String[] args) {
-        Estudiante estudiante1 = new Estudiante();
+        Coche miCoche = new Coche("Ford", "Mustang", 240);
 
-        // Asignación con validaciones
-        estudiante1.setNombre("Valentina");
-        estudiante1.setEdad(20);
-        estudiante1.setNotaPromedio(4.6);
+        // Intentar acceder directamente a los atributos privados
+        // miCoche.marca = "Toyota";         // Error de compilación
+        // System.out.println(miCoche.modelo); // Error de compilación
+        // miCoche.velocidadMaxima = 300;     // Error de compilación
 
-        // Mostrar datos
-        estudiante1.mostrarDatos();
-
-        // Intento de asignación incorrecta
-        Estudiante estudiante2 = new Estudiante();
-        estudiante2.setNombre(""); // Error
-        estudiante2.setEdad(-5);   // Error
-        estudiante2.setNotaPromedio(6.0); // Error
+        // Acceso válido mediante métodos
+        miCoche.acelerar(20);
+        miCoche.acelerar(-10); // Intento inválido
+        miCoche.mostrarDetalles();
     }
 }
