@@ -2,15 +2,15 @@ package Taller_7.Ejercicios;
 
 public class Main {
     public static void main(String[] args) {
-        CuentaBancaria cuenta = new CuentaBancaria("ABC123", 1500.00, "Corriente");
+        // Validando funcionamiento
+        int suma = Utilidades.sumar(10, 5);
+        int resta = Utilidades.restar(20, 8);
+        int producto = Utilidades.multiplicar(4, 6);
+        double cociente = Utilidades.dividir(18, 3);
 
-        // Intento de acceso directo a propiedad privada
-        // System.out.println(cuenta.numeroCuenta); // Error de compilación
-
-        // Acceso válido a tipoCuenta (pública)
-        System.out.println("Tipo: " + cuenta.tipoCuenta);
-
-        // Acceso válido mediante metodo público
-        cuenta.mostrarDetalles();
+        System.out.println("Suma: " + suma);
+        System.out.println("Resta: " + resta);
+        System.out.println("Multiplicación: " + producto);
+        System.out.println("División: " + cociente);
     }
 }
