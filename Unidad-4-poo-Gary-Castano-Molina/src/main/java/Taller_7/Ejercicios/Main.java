@@ -2,17 +2,15 @@ package Taller_7.Ejercicios;
 
 public class Main {
     public static void main(String[] args) {
-        Empleado e1 = new Empleado();
+        CuentaBancaria cuenta = new CuentaBancaria("ABC123", 1500.00, "Corriente");
 
-        // Acceso directo permitido a nombre (es público)
-        e1.nombre = "Santiago";
+        // Intento de acceso directo a propiedad privada
+        // System.out.println(cuenta.numeroCuenta); // Error de compilación
 
-        // Acceso controlado al salario
-        e1.setSalario(3200.50);
-        System.out.println("Empleado: " + e1.nombre);
-        System.out.println("Salario: $" + e1.getSalario());
+        // Acceso válido a tipoCuenta (pública)
+        System.out.println("Tipo: " + cuenta.tipoCuenta);
 
-        // Intento de asignar salario negativo
-        e1.setSalario(-1000); // Validación evita el cambio
+        // Acceso válido mediante metodo público
+        cuenta.mostrarDetalles();
     }
 }
