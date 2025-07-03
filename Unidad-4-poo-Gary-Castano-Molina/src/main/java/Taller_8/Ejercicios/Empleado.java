@@ -1,16 +1,12 @@
 package Taller_8.Ejercicios;
 
-public class Empleado {
-    protected String nombre;
-    protected double salario;
-
-    public Empleado(String nombre, double salario) {
-        this.nombre = nombre;
-        this.salario = salario;
-    }
-
-    public void mostrarDetalles() {
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Salario: $" + salario);
+class Empleado extends Persona {
+    public void mostrarNombre() {
+        System.out.println(nombre); // Error de compilación
     }
 }
+
+/**
+ * Aunque Empleado hereda de Persona, el atributo nombre es private, por lo tanto no es accesible fuera de la clase Persona, ni siquiera por sus subclases.
+ * La herencia no otorga acceso a miembros private; solo a miembros protected y public.
+ */
