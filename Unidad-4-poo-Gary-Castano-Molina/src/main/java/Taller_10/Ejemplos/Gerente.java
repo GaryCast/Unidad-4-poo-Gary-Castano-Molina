@@ -7,3 +7,5 @@ public class Gerente extends Empleado {
         System.out.println("El gerente está gestionando el equipo.");
     }
 }
+
+ //La clase Gerente sobrescribe el metodo trabajar para proporcionar un comportamiento más específico
