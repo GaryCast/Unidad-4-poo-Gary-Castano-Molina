@@ -11,7 +11,7 @@ class Empleado extends Persona {
 
     @Override
     public void mostrarDetalles() {
-        super.mostrarDetalles(); // Llama al método mostrarDetalles de Persona
+        super.mostrarDetalles(); // Llama al metodo mostrarDetalles de Persona
         System.out.println("Departamento: " + departamento);
     }
 }
