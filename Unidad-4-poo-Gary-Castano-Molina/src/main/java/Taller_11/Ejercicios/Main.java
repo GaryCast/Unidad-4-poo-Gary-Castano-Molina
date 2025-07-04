@@ -1,12 +1,12 @@
 package Taller_11.Ejercicios;
 
-
+// Clase de prueba para mostrar los detalles con polimorfismo
 public class Main {
     public static void main(String[] args) {
-        Figura f1 = new Circulo(5);       // Radio 5
-        Figura f2 = new Rectangulo(4, 6); // Ancho 4, Alto 6
+        Empleado e1 = new Gerente("Ana", 5000000, 1200000);
+        Empleado e2 = new Vendedor("Luis", 3000000, 800000);
 
-        f1.mostrarArea(); // Muestra el área del círculo
-        f2.mostrarArea(); // Muestra el área del rectángulo
+        e1.mostrarDetalles(); // Muestra salario con bono
+        e2.mostrarDetalles(); // Muestra salario con comisión
     }
 }
