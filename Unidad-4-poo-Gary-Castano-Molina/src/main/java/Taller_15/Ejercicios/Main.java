@@ -2,13 +2,22 @@ package Taller_15.Ejercicios;
 
 public class Main {
     public static void main(String[] args) {
-        Producto producto = new Producto("Auriculares", 50.0, 0.15);
+        Usuario usuario = new Usuario("gator2025", "secreto123");
 
-        PrecioService precioService = new PrecioService();
-        EtiquetaService etiquetaService = new EtiquetaService();
-        ProductoRepositorio repositorio = new ProductoRepositorio();
+        ValidadorUsuario validador = new ValidadorUsuario();
+        ServicioAutenticacion auth = new ServicioAutenticacion();
 
-        System.out.println(etiquetaService.generarEtiqueta(producto));
-        repositorio.guardar(producto);
+        if (validador.validar(usuario)) {
+            System.out.println("Datos válidos.");
+
+            if (auth.autenticar(usuario, "gator2025", "secreto123")) {
+                System.out.println("Autenticación exitosa.");
+            } else {
+                System.out.println("Credenciales incorrectas.");
+            }
+
+        } else {
+            System.out.println("Datos inválidos del usuario.");
+        }
     }
 }
