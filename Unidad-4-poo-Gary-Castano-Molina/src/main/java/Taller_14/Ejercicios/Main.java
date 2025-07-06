@@ -2,9 +2,10 @@ package Taller_14.Ejercicios;
 
 public class Main {
     public static void main(String[] args) {
-        Animal miAnimal = new Perro();  // ← polimorfismo
-        miAnimal.hacerSonido();
+        Vehiculo miCoche = new Coche();         // Referencia base, objeto derivado
+        Vehiculo miBici = new Bicicleta();      // Referencia base, objeto derivado
 
-        miAnimal.moverCola();  // Error de compilación: metodo no existe en Animal
+        miCoche.mover();     // Polimorfismo en acción
+        miBici.mover();      // Polimorfismo en acción
     }
 }
