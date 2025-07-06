@@ -2,13 +2,13 @@ package Taller_15.Ejercicios;
 
 public class Main {
     public static void main(String[] args) {
-        Libro miLibro = new Libro("Patrones de Diseño", "G. Gamma", "Contenido detallado...");
+        Producto producto = new Producto("Auriculares", 50.0, 0.15);
 
-        GeneradorReporte generador = new GeneradorReporte();
-        LibroRepositorio repositorio = new LibroRepositorio();
+        PrecioService precioService = new PrecioService();
+        EtiquetaService etiquetaService = new EtiquetaService();
+        ProductoRepositorio repositorio = new ProductoRepositorio();
 
-        System.out.println(miLibro.getResumen());
-        System.out.println(generador.generarPDF(miLibro));
-        repositorio.guardar(miLibro);
+        System.out.println(etiquetaService.generarEtiqueta(producto));
+        repositorio.guardar(producto);
     }
 }
