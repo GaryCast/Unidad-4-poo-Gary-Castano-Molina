@@ -6,3 +6,7 @@ public class Estudiante extends Persona {
         System.out.println("Hola, soy una persona.");  // Mismo mensaje que la clase base
     }
 }
+/**
+ * Aumenta el mantenimiento innecesario.
+ * Puede confundir a otros desarrolladores, que esperan una razón lógica para la sobrescritura.
+ */
